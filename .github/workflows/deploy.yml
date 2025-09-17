@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,8 +31,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # Use a PAT stored in repository secrets named GH_PAGES_PAT
-          # Create it at: Settings -> Secrets and variables -> Actions -> New repository secret
-          github_token: ${{ secrets.GH_PAGES_PAT }}
+          # Prefer a PAT stored in repository secret GH_PAGES_PAT but fall back to the
+          # automatically provided GITHUB_TOKEN if GH_PAGES_PAT is not present.
+          # Ensure you either (A) add GH_PAGES_PAT or (B) give Actions Read & write permissions
+          github_token: ${{ secrets.GH_PAGES_PAT || secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: gh-pages
