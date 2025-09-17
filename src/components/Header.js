@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaComment, FaChartLine, FaUserTie, FaBook, FaInfoCircle, FaPhoneAlt, FaUser, FaMicrophone } from 'react-icons/fa';
+import { FaComment, FaChartLine, FaUserTie, FaBook, FaInfoCircle, FaPhoneAlt, FaUser } from 'react-icons/fa';
 import './Header.css'; // New CSS file for header-specific styles
 
 function Header({ onNavigate, userProfile, currentPage }) {

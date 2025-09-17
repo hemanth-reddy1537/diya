@@ -755,20 +755,11 @@ export default function Chatbot() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
-
-  const mounted = useRef(false);
-  useEffect(() => {
-    if (!mounted.current) {
-      botReply("start");
-      mounted.current = true;
-    }
-  }, []);
-
   function addMessage(text, sender = "bot", options = []) {
     setMessages((prev) => [...prev, { text, sender, options }]);
   }
 
-  function botReply(nodeId) {
+  const botReply = React.useCallback((nodeId) => {
     const node = flowData[nodeId];
     if (!node) {
       addMessage("Sorry, I didn't understand that.", "bot", flowData.start.options);
@@ -777,7 +768,15 @@ export default function Chatbot() {
     setTimeout(() => {
       addMessage(node.text, "bot", node.options || []);
     }, 600);
-  }
+  }, []);
+
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) {
+      botReply("start");
+      mounted.current = true;
+    }
+  }, [botReply]);
 
   function handleUserInput(text) {
     if (!text.trim()) return;
