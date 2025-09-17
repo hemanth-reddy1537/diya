@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHeart, FaStar, FaEnvelope } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 // Dummy data for charts
