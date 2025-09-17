@@ -1,0 +1,112 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  background-color: transparent; /* Use a transparent background to let the ChatPage container's color show */
+}
+
+.messages-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.message-bubble.bot {
+  background-color: #E6E6FA; /* A soothing lavender color */
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.message-bubble.user {
+  background-color: #4B0082; /* A deep indigo for contrast */
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble b {
+  font-weight: 700;
+}
+
+.option-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.option-chip {
+  background-color: #DDA0DD; /* A soft plum for options */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+  font-weight: 600;
+}
+
+.option-chip:hover {
+  background-color: #BA55D3; /* A brighter plum on hover */
+}
+
+.input-container {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.input-box {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: #8A2BE2; /* A blue-violet focus color */
+}
+
+.send-button {
+  background-color: #8A2BE2; /* Blue-violet send button */
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.send-button:hover {
+  background-color: #6A5ACD; /* A darker shade on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

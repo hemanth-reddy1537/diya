@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import ChatPage from './pages/ChatPage';
+import Dashboard from './pages/Dashboard';
+import BookMentor from './pages/BookMentor';
+import Resources from './pages/Resources';
+import AboutUs from './pages/AboutUs';
+import Helpline from './pages/Helpline';
+import Footer from './components/Footer'; // Import the new Footer component
 import './App.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('chat');
+  const [userProfile] = useState({
+    name: "reddyreddy153700",
+    email: "reddyreddy@gmail.com"
+  });
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'chat':
+        return <ChatPage onNavigate={setCurrentPage} />;
+      case 'dashboard':
+        return <Dashboard userProfile={userProfile} />;
+      case 'book-mentor':
+        return <BookMentor />;
+      case 'resources':
+        return <Resources />;
+      case 'about-us':
+        return <AboutUs />;
+      case 'helpline':
+        return <Helpline />;
+      default:
+        return <ChatPage onNavigate={setCurrentPage} />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Header onNavigate={setCurrentPage} userProfile={userProfile} currentPage={currentPage} />
+      <main className="main-content">
+        {renderPage()}
+      </main>
+      <Footer /> {/* Render the Footer component here */}
     </div>
   );
 }
