@@ -76,8 +76,7 @@ function Resources() {
               <div className="featured-cards-row">
                 {allResources.filter(res => res.featured).map((res, index) => (
                   <div key={index} className="resource-card featured">
-                    <span className="featured-badge">Featured</span>
-                    <h4>{res.title}</h4>
+                                      <h4>{res.title}</h4>
                     <p>A quick guide for college students.</p>
                     <div className="card-footer">
                       <span>{res.views} views</span>

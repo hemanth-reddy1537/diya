@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
-import './Footer.css'; // New CSS file for the footer
+import './Footer.css';
 
-function Footer() {
+function Footer({ isVisible }) {
   return (
-    <footer className="app-footer">
+    <footer className={`app-footer ${isVisible ? 'footer-visible' : 'footer-hidden'}`}>
       <div className="footer-content">
         <div className="footer-logo">
           <FaHeart className="footer-icon" />

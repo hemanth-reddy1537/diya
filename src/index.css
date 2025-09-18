@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #007BFF;
-  --secondary-color: #28a745;
-  --background-color: #f8f9fa;
-  --text-color: #343a40;
-  --card-background: #ffffff;
+  --primary-color: #4FB7B3;
+  --secondary-color: #82E0D4;
+  --background-color: #EAF7F7;
+  --text-color: #1B4F72;
+  --card-background: #FFFFFF;
 }
 
 body {
@@ -25,8 +25,8 @@ h1, h2, h3 {
 }
 
 header {
-  background-color: var(--card-background);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--background-color);
+  box-shadow: none;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;

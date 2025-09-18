@@ -64,3 +64,10 @@
 .logo-container:hover .diya-icon {
   transform: rotate(-10deg) scale(1.1);
 }
+#logo{
+  color:rgb(7, 19, 98);
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top:20x;
+}

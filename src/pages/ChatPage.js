@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Chatbot from '../components/Chatbot';
-import { FaUser, FaBook, FaChartLine } from 'react-icons/fa';
+import { FaUser, FaBook, FaChartLine, FaBars, FaTimes } from 'react-icons/fa';
+import './Chatpage.css';
+// import '../styles/ChatPage.css'; // Assuming new CSS for this file
 
 function ChatPage({ onNavigate }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className="chat-page-container">
-      <div className="chat-main-area">
-        <div className="chat-header">
-          <div className="user-info">
-            <span className="user-avatar">D</span>
-            <div className="user-details">
-              <h4>Diya</h4>
-              <p>Student Support Companion</p>
-            </div>
-            <span className="online-status">Online</span>
-          </div>
-        </div>
-        
-        {/* The Chatbot component is now the main content area */}
-        <Chatbot />
-      </div>
-      
-      <div className="chat-sidebar">
+    <div className="chat-container-gemini">
+      {/* Sidebar Overlay */}
+      <div className={`sidebar-overlay ${isSidebarOpen ? 'active' : ''}`} onClick={() => setIsSidebarOpen(false)}></div>
+
+      {/* Drop-down Sidebar */}
+      <div className={`drop-sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        <button className="close-sidebar-button" onClick={() => setIsSidebarOpen(false)}><FaTimes /></button>
         <div className="sidebar-section quick-actions">
           <h4>Quick Actions</h4>
           <ul>
@@ -54,6 +47,19 @@ function ChatPage({ onNavigate }) {
             <button>Anxious</button>
           </div>
         </div>
+      </div>
+
+      {/* Main Chat Area */}
+      <div className="chat-main-area-gemini">
+        <button className="open-sidebar-button" onClick={() => setIsSidebarOpen(true)}>
+          <FaBars />
+        </button>
+        <div className="welcome-message-gemini">
+          <h2>Hello, I'm Diya 👋</h2>
+          <p>Your AI-powered student support companion. What can I help you with today?</p>
+        </div>
+        
+        <Chatbot />
       </div>
     </div>
   );

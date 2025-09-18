@@ -8,8 +8,7 @@ function Header({ onNavigate, userProfile, currentPage }) {
   return (
     <header className="app-header">
       <div className="logo-container" onClick={() => onNavigate('chat')}>
-        <span role="img" aria-label="diya-icon" className="diya-icon">🪔</span>
-        <h2>Diya</h2>
+        <h2 id="logo">Diya</h2>
       </div>
       <nav>
         <ul className="nav-links">

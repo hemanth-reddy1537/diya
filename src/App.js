@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ChatPage from './pages/ChatPage';
 import Dashboard from './pages/Dashboard';
@@ -6,7 +6,6 @@ import BookMentor from './pages/BookMentor';
 import Resources from './pages/Resources';
 import AboutUs from './pages/AboutUs';
 import Helpline from './pages/Helpline';
-import Footer from './components/Footer'; // Import the new Footer component
 import './App.css';
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
       <main className="main-content">
         {renderPage()}
       </main>
-      <Footer /> {/* Render the Footer component here */}
     </div>
   );
 }

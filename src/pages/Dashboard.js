@@ -78,6 +78,61 @@ function Dashboard({ userProfile }) {
             </ResponsiveContainer>
           </div>
 
+          {/* New Professional Report Container */}
+          <div className="chart-card professional-report">
+            <h3>Report:</h3>
+            <h4>Confidential Session Report: AI Wellness Companion</h4>
+
+    <p><strong>CLIENT ID:</strong> Jane Doe</p>
+    <p><strong>SESSION DATE:</strong> September 18, 2025</p>
+    <p><strong>COMPANION:</strong> Diya, The Student Support Companion</p>
+
+    <h4>Session Summary</h4>
+    <p>
+        The following is a summary of conversations and user input gathered during a one-on-one session.
+    </p>
+
+    <h4>Presenting Concern</h4>
+    <p>
+        The user, a 26-year-old individual, initiated the conversation to address feelings of overwhelming stress that have persisted for two years. The user described these feelings as a "major part" of their life and expressed a desire to understand and manage them.
+    </p>
+
+    <h4>Key Conversation Insights</h4>
+    <p>
+        The user's input revealed a pattern of severe anxiety responses. They reported experiencing what they referred to as "panic attacks" that occur unexpectedly, like a "wave out of nowhere." These episodes are accompanied by physical sensations, including hand shivers and a feeling of difficulty catching breath.
+    </p>
+    <p>
+        Cognitively, the user's thoughts become distorted during these episodes, characterized by catastrophic thinking, such as feeling unable to handle the situation ("I can't handle the situation") and fears of imminent death ("feels like I can't live after this situation").
+    </p>
+    <p>
+        The user also identified a specific environmental trigger: witnessing others in situations similar to a past traumatic event. This suggests a potential link between their current symptoms and a past experience, a pattern often seen in post-traumatic stress.
+    </p>
+
+    <h4>Behavioral and Emotional Observations</h4>
+    <p>
+        During the session, the user's responses indicated a state of visible anxiety, although their communication was clear and coherent. They were forthcoming about their experiences. The user's tone and word choices suggested a feeling of distress and fear. There were no immediate signs of a safety risk.
+    </p>
+
+    <h4>AI-Generated Impression</h4>
+    <p>
+        Based on the conversation and user-reported symptoms, the data is consistent with a pattern of Panic Disorder. The user experiences recurrent and unexpected panic attacks, coupled with significant anticipatory anxiety and avoidance behavior.
+    </p>
+    <p>
+        The reported re-experiencing of distress when exposed to specific triggers points to a possible trauma-related component. This may warrant a deeper exploration for a potential Post-Traumatic Stress Disorder (PTSD) diagnosis by a professional.
+    </p>
+
+    <h4>Recommended Actions</h4>
+    <p>
+        The user's primary struggles appear to be centered on emotional dysregulation, physical manifestations of anxiety, and avoidance as a coping strategy.
+    </p>
+    <ul>
+        <li><strong>Further Conversation:</strong> Continue to guide the user through grounding exercises and coping mechanisms available within the app.</li>
+        <li><strong>Professional Referral:</strong> Strongly recommend that the user connect with a qualified professional, such as a university counselor or a licensed therapist, for a formal evaluation and personalized treatment plan.</li>
+        <li><strong>Safety Plan:</strong> Encourage the user to establish a safety plan, including identifying a trusted contact and a local crisis helpline.</li>
+        <li><strong>Resource Navigation:</strong> Direct the user to the app's "Resources" section for guided meditations, articles on anxiety management, and a deeper understanding of emotional well-being.</li>
+    </ul>
+          </div>
+
           <div className="sidebar-right">
             <div className="daily-mood-check card">
               <h4>Daily Mood Check</h4>
