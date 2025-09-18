@@ -114,7 +114,7 @@ function AboutUs() {
       
       <div className="conclusion-section">
         <p>
-          Our mission is to break the stigma, enable access, and create a supportive student community. We believe that with the right tools and a kind companion, every student can find their path to a healthier, happier life.
+          Our mission is to brk the stigma, enable access, and create a supportive student community. We believe that with the right tools and a kind companion, every student can find their path to a healthier, happier life.
         </p>
         <div className="call-to-action">
           <p>Let’s change the way we talk about mental health—one conversation at a time.</p>
